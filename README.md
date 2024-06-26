@@ -10,8 +10,7 @@
 ├── 2.개요
 ├── 3.특징  
 ├── 4.사용법  
-|   ├── 4.1.개발 환경 & 협업 툴
-|   └── 4.2.기능 시연 영상  
+|   └── 4.1.개발 환경 & 협업 툴  
 └── 5.스크린샷 
     └── 5.1.인덱스 비교
 ````
@@ -48,7 +47,7 @@
 	<img src="https://github.com/hn922003/rednaver/blob/master/screenshots/red.png" width="400px" alt="인덱스">
 </a>
 <a href="https:///raw.githubusercontent.com/hn922003/rednaver/master/screenshots/green.png">
-	<img src="https://github.com/hn922003/rednaver/blob/master/screenshots/green.png" width="400px" alt="인덱스">
+	<img src="https://github.com/hn922003/rednaver/blob/master/screenshots/green.png" width="400px" alt="오리지널">
 </a>
 
 
