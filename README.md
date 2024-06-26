@@ -1,11 +1,11 @@
 # 레드 네이버(Red Naver) 
-<img src="https://github.com/hn922003/Updown/blob/master/screenshots/01.main.png" alt="인덱스">
+<img src="https://github.com/hn922003/rednaver/blob/master/screenshots/red.png" width="400px" alt="인덱스">
 
 ----
 ## 1. 목차
 
 ````
-레드 네어비(Red Naver)
+레드 네이버(Red Naver)
 ├── 1.목차
 ├── 2.개요
 ├── 3.특징  
@@ -44,8 +44,11 @@
 
 ### 5.1. 인덱스 비교
 
-<a href="https:///raw.githubusercontent.com/hn922003/Updown/master/screenshots/01.main.png">
-	<img src="https://github.com/hn922003/Updown/blob/master/screenshots/01.main.png" width="400px" alt="인덱스">
+<a href="https:///raw.githubusercontent.com/hn922003/rednaver/master/screenshots/red.png">
+	<img src="https://github.com/hn922003/rednaver/blob/master/screenshots/red.png" width="400px" alt="인덱스">
+</a>
+<a href="https:///raw.githubusercontent.com/hn922003/rednaver/master/screenshots/green.png">
+	<img src="https://github.com/hn922003/rednaver/blob/master/screenshots/green.png" width="400px" alt="인덱스">
 </a>
 
 
