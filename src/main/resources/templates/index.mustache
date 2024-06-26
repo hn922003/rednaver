@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Naver</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="icon" href="./img/naver_icon.png" type="image/x-icon">
+<script type="text/javascript" src="js/Account.js" defer="defer"></script>
+<style>@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap')</style>
+<style>@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Gowun+Dodum&display=swap')</style>
+</head>
+<body>
+<!-- 헤더/메인 컨테이너 -->
+<div id="page-container" class="container-fluid w-75">
+	
+	<!-- 헤더 -->
+	<header id="header-container" class="container-fluid pt-3 pb-5">
+		
+		<!-- 헤더1단: 메뉴 / 네이버페이 ====== 네이버톡 / 알림 -->
+		<div id="header-container-1" class="container-fluid row">
+			
+			<!-- 왼쪽 바로가기 메뉴 -->
+			<div id="hc1-menu-container-left" class="col-2 list-inline">
+				<!-- 네이버 메뉴 -->
+				<i class="bi bi-list fs-2 list-inline-item"></i>
+				<!-- 네이버 페이 -->
+				<i class="bi bi-coin fs-2 list-inline-item"></i>
+			</div>
+			
+			<!-- 위치조정용 히든박스 -->
+			<div id="hc1-hidden-container" class="col-8">
+			</div>
+			
+			<!-- 오른쪽 바로가기 메뉴 -->
+			<div id="hc1-menu-container2" class="col-2 list-inline text-end">
+				<!-- 네이버 톡 -->
+				<i class="bi bi-chat-dots fs-2 list-inline-item"></i>
+				<!-- 알림 / 혜택 -->
+				<i class="bi bi-bell fs-2 list-inline-item"></i>
+			</div>
+		</div>
+		
+		<!-- 헤더2단: 검색창 ======= 광고면 -->
+		<div id="header-container-2" class="container-fluid row my-2">
+			
+			<!-- 검색창 위치조정 히든박스 -->
+			<div id="hc2-hidden-container1" class="col-3">
+			</div>
+			
+			<!-- 검색창 -->
+			<div id="hc2-search-container" class="col-6 row d-flex py-1 my-1 text-center aline-middle border border-danger rounded-pill">
+				<div class="col-1">
+					<a href="?">
+						<img src="./img/naver_rev.png" alt="로고" style="width: 50px;">
+					</a> 
+				</div>
+				<input type="text" class="col-10 border-0 input-focus-border-color-0" placeholder="&nbsp;검색어를 입력하세요"> 
+				<button class="col-1 btn" type="submit">
+					<i class="bi bi-search text-danger fw-bold"></i>
+				</button>
+			</div>
+			
+			<!-- 광고면 위치조정 히든박스 -->
+			<div id="hc2-hidden-container2" class="col-1">
+			</div>
+			
+			<!-- 광고면 -->
+			<div id="hc2-add-container" class="col-2 py-2 text-end align-middle">
+				<img width="175" src="./img/ad1.png" alt="광고_치지직">
+			</div>
+		</div>
+		
+		<!-- 헤더3단: 메일 / 카페 ... 바로가기 아이콘 버튼 -->
+		<div id="header-container-3" class="container-fluid row">
+			
+			<!-- 위치조정 히든박스 -->
+			<div id="hc3-hidden-container1" class="col-3">
+			</div>
+			
+			<!-- 바로가기 리스트 -->
+			<div id="hc3-link-container" class="col-6">
+				<ul class="list-inline list-unstyled">
+					<li class="list-inline-item text-center">
+						<a class="text-decoration-none text-black" href="?">
+							<img class="shadow-sm bg-body rounded-3 border" src="./img/btn01_webtoon.png" alt="웹툰" style="width: 45px;"><br/>
+							<span>웹툰</span>
+						</a>
+					</li>
+					<li class="list-inline-item text-center">
+						<a class="text-decoration-none text-black" href="?">
+							<img class="shadow-sm bg-body rounded-3 border" src="./img/btn02_cafe.png" alt="카페" style="width: 45px;"><br/>
+							<span>카페</span>
+						</a>
+					</li>
+					<li class="list-inline-item text-center">
+						<a class="text-decoration-none text-black" href="?">
+							<img class="shadow-sm bg-body rounded-3 border" src="./img/btn03_blog.png" alt="블로그" style="width: 45px;"><br/>
+							<span>블로그</span>
+						</a>
+					</li>
+					<li class="list-inline-item text-center">
+						<a class="text-decoration-none text-black" href="?">
+							<img class="shadow-sm bg-body rounded-3 border" src="./img/btn04_shop.png" alt="쇼핑" style="width: 45px;"><br/>
+							<span>쇼핑</span>
+						</a>
+					</li>
+					<li class="list-inline-item text-center">
+						<a class="text-decoration-none text-black" href="?">
+							<img class="shadow-sm bg-body rounded-3 border" src="./img/btn05_band.png" alt="밴드" style="width: 45px;"><br/>
+							<span>밴드</span>
+						</a>
+					</li>
+					<li class="list-inline-item text-center">
+						<a class="text-decoration-none text-black" href="?">
+							<img class="shadow-sm bg-body rounded-3 border" src="./img/btn06_line.png" alt="라인" style="width: 45px;"><br/>
+							<span>라인</span>
+						</a>
+					</li>
+					<li class="list-inline-item text-center">
+						<a class="text-decoration-none text-black" href="?">
+							<img class="shadow-sm bg-body rounded-3 border" src="./img/btn07_know.png" alt="지식인" style="width: 45px;"><br/>
+							<span>지식인</span>
+						</a>
+					</li>
+					<li class="list-inline-item text-center">
+						<a class="text-decoration-none text-black" href="?">
+							<img class="shadow-sm bg-body rounded-3 border" src="./img/btn08_talk.png" alt="톡" style="width: 45px;"><br/>
+							<span>톡</span>
+						</a>
+					</li>
+					<li class="list-inline-item text-center">
+						<a class="text-decoration-none text-black" href="?">
+							<img class="shadow-sm bg-body rounded-3 border" src="./img/btn09_tv.png" alt="치지직" style="width: 45px;"><br/>
+							<span>치지직</span>
+						</a>
+					</li>
+					<li class="list-inline-item text-center">
+						<a class="text-decoration-none text-black" href="?">
+							<img class="shadow-sm bg-body rounded-3 border" src="./img/btn10_series.png" alt="시리즈" style="width: 45px;"><br/>
+							<span>시리즈</span>
+						</a>
+					</li>
+					<li class="list-inline-item text-center align-top">
+						<a class="text-decoration-none text-black" href="?">
+							<img class="bg-white rounded-3 border align-top" src="./img/btn11_more.png" alt="로고" style="width: 45px;"><br/>
+							<span></span>
+						</a>
+					</li>
+				
+					
+				</ul>
+			</div>
+			
+			<!-- 위치조정 히든박스 -->
+			<div id="hc3-hidden-container2" class="col-3">
+			</div>
+		</div>
+	</header>
+	
+	<!-- 메인 -->
+	<main id="main-container" class="container-fluid pb-5 d-flex">
+	
+		<!-- 메인 좌측 -->
+		<div id="main-container-left" class="container-fluid" style="width: 66%">
+			
+			<!-- 좌측1단: 뉴스박스 -->
+			<div id="main-container-left-1" class="container-fluid border rounded-3">
+				
+				<!-- 뉴스 탭목록 -->
+				<ul class="nav nav-tabs py-2">
+				  	<li class="nav-item">
+				    	<a class="nav-link text-decoration-none text-black active bs-danger-bg-subtle" 
+				    	aria-current="page" href="#"><b>뉴스스탠드</b></a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black
+		    			link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#">언론사편집</a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black" href="#">엔터</a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black" href="#">스포츠 <b><i class="bi bi-broadcast-pin text-danger fw-bold">Live</i></b></a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black" href="#">경제</a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black" href="#">쇼핑투데이</a>
+					</li>
+					
+				</ul>
+				<!-- 뉴스 종류 -->
+				<div id="mcl1-newsfield" class="container-fluid mt-3 bg-light py-3">
+					<b>오늘의 뉴스 <i class="bi bi-caret-down-fill"></i></b>&nbsp;&nbsp;&nbsp;
+					<span>네이버 포털사이트 Red Ver.1 발표 "레드 네이버" 공개</span>
+				</div>
+				
+				<!-- 뉴스 배너 -->
+				<div class="mt-3 container-fluid d-flex">
+					<!-- 왼쪽 배너 -->
+					<div id="mcl1-banner-left" class="w-50">
+						<div class="d-flex">
+							<img class="rounded-3" src="./img/naver_icon.png" alt="Card image" style="width:200px; height:100px; object-fit:cover;">
+							<div class="w-50 mx-3">
+								<b class="card-title text-wrap">뉴스 제목 1</b><br>
+						      	<a href="#" class="text-decoration-none text-black small">
+									뉴스 내용1
+								</a>
+							</div>
+						</div>
+						<br>						
+						
+						<div class="d-flex">
+							<img class="rounded-3" src="./img/naver_icon.png" alt="Card image" style="width:200px; height:100px; object-fit:cover;">
+							<div class="w-50 mx-3">
+								<h4 class="card-title">John Doe</h4>
+						      	<a href="#" class="text-decoration-none text-black card-text">
+									Some example text some example text. John Doe is an architect and engineer
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 오른쪽 배너 -->
+					<div id="mcl1-banner-right" class="w-50">
+						<div class="d-flex">
+							<img class="rounded-3" src="./img/naver_icon.png" alt="Card image" style="width:200px; height:100px; object-fit:cover;">
+							<div class="w-50 mx-3">
+								<h4 class="card-title">John Doe</h4>
+						      	<a href="#" class="text-decoration-none text-black card-text">
+									Some example text some example text. John Doe is an architect and engineer
+								</a>
+							</div>
+						</div>
+						<br>						
+						
+						<div class="d-flex">
+							<img class="rounded-3" src="./img/naver_icon.png" alt="Card image" style="width:200px; height:100px; object-fit:cover;">
+							<div class="w-50 mx-3">
+								<h4 class="card-title">John Doe</h4>
+						      	<a href="#" class="text-decoration-none text-black card-text">
+									Some example text some example text. John Doe is an architect and engineer
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 더보기 박스 -->
+				<div class="container-fluid text-center mt-3 mb-1 w-100 border-top">
+					<div class="small">
+						<span><i class="bi bi-arrow-left-circle fs-2"></i>&nbsp;&nbsp;&nbsp;</span> 
+						<span class="text-danger fw-bold">언론사</span> <span class="fw-bold">더보기 1</span> /4&nbsp;&nbsp;&nbsp;
+						<span><i class="bi bi-arrow-right-circle fs-2"></i></span> 
+					</div>
+				</div>
+			</div>
+			
+			<!-- 좌측2단: 자동차 / 웹툰 등 장르박스 ++ 더보기 버튼-->
+			<div id="main-container-left-2" class="container-fluid border rounded-3 mt-3">
+				<!-- 장르 탭목록 -->
+				<ul class="nav nav-tabs py-2">
+				  	<li class="nav-item">
+				    	<a class="nav-link text-decoration-none text-black active bs-danger-bg-subtle" aria-current="page" href="#">추천•구독</a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black
+		    			link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#">웹툰</a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black" href="#">시리즈</a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black" href="#">패션뷰티</a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black" href="#">레시피</a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black" href="#">리빙</a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black" href="#">아동</a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black" href="#">지식+</a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black" href="#">건강</a>
+					</li>
+					<li class="nav-item">
+		    			<a class="nav-link text-decoration-none text-black" href="#">게임</a>
+					</li>
+				</ul>
+				
+				<!-- 장르 레이아웃 -->
+				<div id="mcl2-genre-up" class="container-fluid d-flex py-3">
+					<div class="card w-25 d-flex mx-1">
+						<img class="rounded-3" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+						<div class="card-body">
+							<h4 class="card-title">관심장르 주제1</h4>
+							<p class="card-text">내용1</p>
+							<a href="#" class="btn btn-primary">바로가기</a>
+						</div>
+					</div>
+					<div class="card w-25 d-flex mx-1">
+						<img class="rounded-3" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+						<div class="card-body">
+							<h4 class="card-title">John Doe</h4>
+							<p class="card-text">Some example text.</p>
+							<a href="#" class="btn btn-primary">See Profile</a>
+						</div>
+					</div>
+					<div class="card w-25 d-flex mx-1">
+						<img class="rounded-3" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+						<div class="card-body">
+							<h4 class="card-title">John Doe</h4>
+							<p class="card-text">Some example text.</p>
+							<a href="#" class="btn btn-primary">See Profile</a>
+						</div>
+					</div>
+					<div class="card w-25 d-flex mx-1">
+						<img class="rounded-3" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+						<div class="card-body">
+							<h4 class="card-title">John Doe</h4>
+							<p class="card-text">Some example text.</p>
+							<a href="#" class="btn btn-primary">See Profile</a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 장르 레이아웃 하단 -->
+				<div id="mcl2-genre-down" class="container-fluid d-flex py-3">
+					<div class="card w-25 d-flex mx-1">
+						<img class="rounded-3" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+						<div class="card-body">
+							<h4 class="card-title">관심장르 주제1</h4>
+							<p class="card-text">내용1</p>
+							<a href="#" class="btn btn-primary">바로가기</a>
+						</div>
+					</div>
+					<div class="card w-25 d-flex mx-1">
+						<img class="rounded-3" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+						<div class="card-body">
+							<h4 class="card-title">John Doe</h4>
+							<p class="card-text">Some example text.</p>
+							<a href="#" class="btn btn-primary">See Profile</a>
+						</div>
+					</div>
+					<div class="card w-25 d-flex mx-1">
+						<img class="rounded-3" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+						<div class="card-body">
+							<h4 class="card-title">John Doe</h4>
+							<p class="card-text">Some example text.</p>
+							<a href="#" class="btn btn-primary">See Profile</a>
+						</div>
+					</div>
+					<div class="card w-25 d-flex mx-1">
+						<img class="rounded-3" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+						<div class="card-body">
+							<h4 class="card-title">John Doe</h4>
+							<p class="card-text">Some example text.</p>
+							<a href="#" class="btn btn-primary">See Profile</a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 더보기 버튼 -->
+				<div id="mcl2-morebtn" class="text-center align-middle my-1 border-top">
+					<button class="btn fw-bold">
+						더보기 <span class="text-danger">+</span>  
+					</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 메인 우측 -->
+		<div id="main-container-right" class="container-fluid" style="width: 33%">
+			
+			<!-- 우측1단: 로그인박스 -->
+			<div id="main-container-right-1" class="container-fluid text-center border rounded-3">
+				
+				<!-- 로그인 메세지 -->
+				<div id="mcr1-message" class="pt-3 pb-2">
+					<span>네이버를 더 안전하고 편리하게 이용하세요</span>
+				</div>
+				
+				<!-- 로그인 창 버튼 -->
+				<div id="mcr1-loginbtn">
+					<button class="btn bg-danger text-white align-middle text-center" style="width: 380px; height: 60px;">
+						<span class="fw-bold fs-5">NAVER</span> 로그인
+					</button>
+				</div>
+				
+				<!-- 아이디찾기 / 비밀번호찾기 / 회원가입 -->
+				<div id="mcr1-functionbox" class="pt-2 pb-3 small">
+					아이디찾기 | 비밀번호찾기 | 회원가입
+				</div>
+			</div>
+			
+			<!-- 우측2단: 날씨박스 -->
+			<!-- 여기다가 만년달력을 넣으면 어떨가??????????... 흠.. -->
+			<div id="main-container-right-2" class="container-fluid border rounded-3 mt-3">
+				
+				<div class="card">
+					<div class="card-body d-flex">
+						<!-- 날씨 헤더 -->
+						<h4 class="card-title w-50">날씨 위젯</h4>
+						<p class="card-text w-50 text-end">종로구 관철동</p>
+					</div>
+					<!-- 날씨 정보 -->
+					<img class="card-img-bottom rounded-3" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+				</div>
+			</div>
+			
+			<!-- 우측3단: 증시박스 -->
+			<div id="main-container-right-3" class="container-fluid border rounded-3 mt-3">
+				<div class="card">
+					<div class="card-body d-flex">
+						<!-- 증시 헤더 -->
+						<h4 class="card-title w-50">증권정보</h4>
+						<p class="card-text w-50 text-end">오늘의 뜨는 증권</p>
+					</div>
+					<!-- 증시 정보 -->
+					<img class="card-img-bottom rounded-3" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+				</div>
+			</div>
+			
+			<!-- 우측4단: 위젯박스 -->
+			<div id="main-container-right-4" class="container-fluid border rounded-3 mt-3">
+				<!-- 위젯 상단 -->
+				<div class="d-flex">
+					<!-- 위젯1 -->
+					<div class="card w-50 m-1">
+						<img class="card-img-top" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+						<div class="card-img-overlay">
+							<h4 class="card-title">위젯1</h4>
+							<p class="card-text">위젯1 내용</p>
+							<a href="#" class="btn btn-small btn-primary">바로가기</a>
+						</div>
+					</div>
+					<!-- 위젯2 -->
+					<div class="card w-50 m-1">
+						<img class="card-img-top" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+						<div class="card-img-overlay">
+							<h4 class="card-title">위젯1</h4>
+							<p class="card-text">위젯1 내용</p>
+							<a href="#" class="btn btn-small btn-primary">바로가기</a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 위젯 하단 -->
+				<div class="d-flex">
+					<!-- 위젯3 -->
+					<div class="card w-50 m-1">
+						<img class="card-img-top" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+						<div class="card-img-overlay">
+							<h4 class="card-title">위젯3</h4>
+							<p class="card-text">위젯3 내용</p>
+							<a href="#" class="btn btn-small btn-primary">바로가기</a>
+						</div>
+					</div>
+					<!-- 위젯4 -->
+					<div class="card w-50 m-1">
+						<img class="card-img-top" src="./img/naver_icon.png" alt="Card image" style="height:200px; object-fit:cover;">
+						<div class="card-img-overlay">
+							<h4 class="card-title">위젯4</h4>
+							<p class="card-text">위젯4 내용</p>
+							<a href="#" class="btn btn-small btn-primary">바로가기</a>
+						</div>
+					</div>
+				</div>	
+			
+			</div>
+		</div>
+	</main>
+</div>
+
+<!-- 풋터 랩퍼 -->
+<div id="page-container" class="container-fluid border bg-light">	
+	<!-- 풋터 -->
+	<footer id="footer-container" class="footer mt-auto py-3 container-fluid w-75">
+	
+		<!-- 풋터1단: 공지사항 ====== 서비스 전체 보기 -->
+		<hr/>
+		<div id="footer-container-1" class="container-fluid">
+			<!-- 공지사항 -->
+			<div id="fcl1-notice">
+				<b>공지사항</b>
+				<span>네이버 ‘개인정보 처리방침’ 변경에 대한 안내 말씀드립니다.</span>
+			</div>
+		</div>
+		<hr/>
+		
+		<!-- 풋터2단: 파트너 / 디벨로퍼 ===== 웨일브라우저 / 기업사이트 -->
+		<div id="footer-container-2" class="container-fluid d-flex row">
+		
+			<!-- 파트너/디벨로퍼 -->
+			<div id="fc2-partner-developer" class="col-7 row">
+				<b class="col-2">Partners</b>
+				<span class="col-10">프로젝트 | 레드 네이버 | 스프링 부트 | 포트폴리오 | 프론트 페이지</span>
+				<b class="col-2">Developers</b>
+				<span class="col-10">웹개발자 김현담 | 부트스트랩 | CSS | MUSTACHE</span>
+			</div>
+			
+			<!-- 공백 히든상자 -->
+			<div class="col-1">
+			</div>
+			
+			<!-- 웨일브라우저 / 기업사이트 -->
+			<div id="fc2-whales-site" class="col-4 row">
+				<div class="col-3">
+					<b>레드웨일</b><br/>
+					<span>이용안내</span>
+				</div>
+				<div class="col-3">
+					<img class="rounded-3 border" src="./img/whale.png" alt="웨일브라우저" style="width: 60px;"><br/>
+				</div>
+				<div class="col-3">
+					<b>기업사이트</b><br/>
+					<span>바로가기</span>
+				</div>
+				<div class="col-3">
+					<img class="rounded-3 border" src="./img/naver_icon.png" alt="네이버주식회사" style="width: 60px;"><br/>
+				</div>
+			</div>
+		</div>
+		<hr/>
+		
+		<!-- 풋터3단: 회사소개 / 인재채용 등 바로가기 링크 -->
+		<div id="footer-container-3" class="container-fluid text-center">
+			<!-- 바로가기 링크 -->
+			회사소개 인재채용 제휴제안 이용약관 <b>개인정보처리방침</b> 청소년보호정책 네이버 정책 고객센터 <b>ⓒ NAVER Corp.</b>
+		</div>
+		
+	</footer>
+</div>
+</body>
+</html>
